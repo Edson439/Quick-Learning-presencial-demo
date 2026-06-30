@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="ql-sucursales-page">
+
+	<!-- 🔴 BARRA ROJA SUPERIOR -->
+	<div class="ql-home-top-area">
+
+  <div class="ql-home-promo-bar">
+    <div class="ql-home-promo-content">
+
+	<div class="ql-home-promo-window">
+	  <div class="ql-home-promo-track">
+
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+		<span>⚡ PROMO ⚡ 50% OFF en membresías Online de 3, 6 y 12 meses ⚡</span>
+
+	  </div>
+	</div>
+
+      <button class="ql-home-promo-close">×</button>
+
+    </div>
+  </div>
+
+  <!-- 🔵 MENÚ PRINCIPAL -->
+  <header class="ql-home-main-nav">
+
+<a href="index.html" class="ql-logo-link">
+
+  <div class="ql-home-nav-logo">
+
+    <img src="images/ql-logo.png"
+         class="ql-logo-slide ql-logo-active"
+         alt="Quick Learning Logo">
+
+    <img src="images/ql-logo2.png"
+         class="ql-logo-slide"
+         alt="Quick Learning Logo">
+
+    <img src="images/ql-logo3.png"
+         class="ql-logo-slide"
+         alt="Quick Learning Logo">
+
+  </div>
+
+</a>
+
+    <nav class="ql-home-nav-links">
+      <a href="#cursos">Cursos</a>
+      <a href="#metodo">Método</a>
+      <a href="sucursales.html">Sucursales</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="ql-home-nav-action">
+		<button class="ql-home-contact-button">
+		  <span class="ql-home-contact-icon ql-home-contact-icon-left">
+			<img src="images/whats2.png" alt="WhatsApp">
+		  </span>
+
+		  <img class="ql-home-contact-text-img" src="images/empieza-hoy.png" alt="Empieza hoy">
+
+		  <span class="ql-home-contact-icon ql-home-contact-icon-right">
+			<img src="images/whats.png" alt="WhatsApp">
+		  </span>
+		</button>
+    </div>
+	  
+	<button class="ql-mobile-menu-toggle" id="qlMobileMenuToggle">
+	  <i class="fas fa-bars"></i>
+	</button>
+	  
+  </header>
+
+<div class="ql-home-course-date" id="courseDateBar">
+
+  <span class="ql-home-course-date-text">
+    Próximo inicio de curso:&nbsp;<strong>20 de abril</strong>
+  </span>
+
+  <button class="ql-home-course-date-close">×</button>
+
+</div>
+
+</div>
+
+
+<!-- 🟦 SUCURSALES -->
+<section class="ql-sucursales-section">
+
+
+
+  <div class="ql-sucursales-content">
+
+    <div class="ql-sucursales-panel">
+
+      <div class="ql-sucursales-search-row">
+        <div class="ql-sucursales-search-box">
+          <input type="text" id="qlSucursalSearch" placeholder="Buscar sucursal">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+<button class="ql-sucursales-filter-btn" id="qlFilterBtn">
+  <i class="fa-solid fa-sliders"></i>
+</button>
+
+<div class="ql-filter-menu" id="qlFilterMenu">
+  <div class="ql-filter-title">Selecciona ciudad</div>
+
+  <select id="qlCityFilter">
+    <option value="">Todas las ciudades</option>
+    <option value="CDMX">CDMX</option>
+    <option value="Guadalajara">Guadalajara</option>
+    <option value="Monterrey">Monterrey</option>
+    <option value="Puebla">Puebla</option>
+    <option value="Tijuana">Tijuana</option>
+    <option value="Saltillo">Saltillo</option>
+    <option value="Juárez">Juárez</option>
+    <option value="Tampico">Tampico</option>
+    <option value="Toluca">Toluca</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="Cancún">Cancún</option>
+    <option value="Playa del Carmen">Playa del Carmen</option>
+    <option value="Aguascalientes">Aguascalientes</option>
+    <option value="Veracruz">Veracruz</option>
+    <option value="San Luis">San Luis</option>
+    <option value="León">León</option>
+  </select>
+
+  <div class="ql-filter-title ql-filter-branches-title" id="qlBranchesTitle">
+    Sucursales
+  </div>
+
+  <div class="ql-filter-branches" id="qlBranchesFilter"></div>
+</div>
+      </div>
+
+      <div class="ql-sucursales-list" id="qlSucursalesList">
+
+        <div
+		  class="ql-sucursal-card ql-sucursal-card-active"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Iztapalapa&output=embed"
+		>
+          <h3>Quick Learning Iztapalapa</h3>
+          <p>
+            Anillo Perif. 105, Constitución de
+            1917, Iztapalapa, 09260 Ciudad
+            de México, CDMX
+          </p>
+
+          <div class="ql-sucursal-info">
+            <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+          </div>
+        </div>
+
+        <div
+		  class="ql-sucursal-card"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Neza&output=embed"
+		>
+          <h3>Quick Learning Neza</h3>
+          <p>
+            Av. Adolfo López Mateos
+            157-1er piso, Metropolitana
+            2da Secc, 57740 Cdad.
+          </p>
+
+          <div class="ql-sucursal-info">
+            <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+          </div>
+        </div>
+		  
+		<div
+		  class="ql-sucursal-card"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Coyoac%C3%A1n%20Avenida%20Divisi%C3%B3n%20del%20Norte%202646&output=embed"
+		>
+		  <h3>Quick Learning Coyoacán</h3>
+		  <p>
+			Avenida División del Norte 2646,
+			Churubusco, San Diego
+			Churubusco, Coyoacán, 04120
+		  </p>
+
+		  <div class="ql-sucursal-info">
+			<span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+		  </div>
+		</div>
+
+		<div
+		  class="ql-sucursal-card"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Polanco%20Mariano%20Escobedo%20446&output=embed"
+		>
+		  <h3>Quick Learning Polanco</h3>
+		  <p>
+			Calz. Gral. Mariano Escobedo 446
+			Chapultepec Morales,
+			Anzures, Miguel Hidalgo, 11590
+		  </p>
+
+		  <div class="ql-sucursal-info">
+			<span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+		  </div>
+		</div>
+
+		<div
+		  class="ql-sucursal-card"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Portales%20Calzada%20de%20Tlalpan%201295&output=embed"
+		>
+		  <h3>Quick Learning Portales</h3>
+		  <p>
+			Calz. de Tlalpan 1295, Portales
+			TNte, Benito Juárez, 03303
+			Ciudad de México, CDMX
+		  </p>
+
+		  <div class="ql-sucursal-info">
+			<span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+		  </div>
+		</div>
+
+		<div
+		  class="ql-sucursal-card"
+		  data-map="https://www.google.com/maps?q=Quick%20Learning%20Villa%20Coapa%20Rancho%20Tollocan%2061&output=embed"
+		>
+		  <h3>Quick Learning Villa Coapa</h3>
+		  <p>
+			Rancho Tollocan 61, Coapa, Los
+			Girasoles, Coyoacán, 04920 
+			Ciudad de México, CDMX,
+		  </p>
+
+		  <div class="ql-sucursal-info">
+			<span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+		  </div>
+		</div>
+		  
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Alamo%20Guadalajara&output=embed">
+  <h3>Quick Learning Álamo</h3>
+  <p>Av. Niños Héroes 709 Plaza, El Alamo, 45560 San Pedro Tlaquepaque, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Americas%20Guadalajara&output=embed">
+  <h3>Quick Learning Américas</h3>
+  <p>Av. de las Américas 1171, Circunvalación Americas, 44630 Guadalajara, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Autonoma%20Guadalajara&output=embed">
+  <h3>Quick Learning Autónoma</h3>
+  <p>Av. Patria 607, Jardines Universidad, 45110 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Aviacion%20Guadalajara&output=embed">
+  <h3>Quick Learning Aviación</h3>
+  <p>Av Guadalupe N° 6818-Loc. 16 - 18, Residencial Plaza Guadalupe, Lote Plaza, Guadalupe Inn, Exitmex, 45030 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Belenes%20Guadalajara&output=embed">
+  <h3>Quick Learning Belenes</h3>
+  <p>Av Guadalupe N° 6818-Loc. 16 - 18, Residencial Plaza Guadalupe, Lote Plaza, Guadalupe Inn, Exitmex, 45030 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Chapultepec%20Guadalajara&output=embed">
+  <h3>Quick Learning Chapultepec</h3>
+  <p>Av. de la Paz 2002, Col Americana, Americana, 44150 Guadalajara, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Guadalupe%20Guadalajara&output=embed">
+  <h3>Quick Learning Guadalupe</h3>
+  <p>Av Guadalupe N° 6818-Loc. 16 - 18, Residencial Plaza Guadalupe, Lote Plaza, Guadalupe Inn, Exitmex, 45030 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Independencia%20Guadalajara&output=embed">
+  <h3>Quick Learning Independencia</h3>
+  <p>Av. Cvln. División del Nte. 242, Independencia, 44290 Guadalajara, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Las%20Fuentes%20Guadalajara&output=embed">
+  <h3>Quick Learning Las Fuentes</h3>
+  <p>Dentro de Plaza, Av. Adolfo López Mateos Sur 5880, Las Fuentes, 45070 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+  <div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Plaza%20del%20Sol%20Guadalajara&output=embed">
+
+  <h3>Quick Learning Plaza del Sol</h3>
+  <p>Av Plaza del Sol 25-Loc 83, Rinconada del Sol, 45067 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+	<span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Revolucion%20Guadalajara&output=embed">
+  <h3>Quick Learning Revolución</h3>
+  <p>Calz. Revolución 2293, Magaña, 44808 Guadalajara, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Santa%20Anita%20Guadalajara&output=embed">
+  <h3>Quick Learning Santa Anita</h3>
+  <p>Av Guadalupe N° 6818-Loc. 16 - 18, Residencial Plaza Guadalupe, Lote Plaza, Guadalupe Inn, Exitmex, 45030 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+
+<div class="ql-sucursal-card" data-map="https://www.google.com/maps?q=Quick%20Learning%20Tonala%20Guadalajara&output=embed">
+  <h3>Quick Learning Tonalá</h3>
+  <p>Av Guadalupe N° 6818-Loc. 16 - 18, Residencial Plaza Guadalupe, Lote Plaza, Guadalupe Inn, Exitmex, 45030 Zapopan, Jal.</p>
+  <div class="ql-sucursal-info">
+    <span><i class="fa-regular fa-clock"></i> 7:00 am a 9:00 pm</span>
+  </div>
+</div>
+		  
+		  
+      </div>
+
+    </div>
+
+	<div class="ql-sucursales-map">
+	  <img class="ql-custom-map-pin" src="images/pin.png" alt="Ubicación">
+
+	  <iframe
+		id="qlSucursalMap"
+			src="https://www.google.com/maps?q=Quick%20Learning%20Iztapalapa&output=embed"
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade">
+		  </iframe>
+		</div>
+
+  </div>
+
+</section>
+	
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const qlLogos = document.querySelectorAll('.ql-logo-slide');
+  let qlCurrentLogo = 0;
+
+  function cambiarLogo() {
+    if (!qlLogos.length) return;
+
+    qlLogos[qlCurrentLogo].classList.remove('ql-logo-active');
+    qlCurrentLogo++;
+
+    if (qlCurrentLogo >= qlLogos.length) {
+      qlCurrentLogo = 0;
+    }
+
+    qlLogos[qlCurrentLogo].classList.add('ql-logo-active');
+
+    let tiempo = 1000;
+
+    if (qlCurrentLogo === 1) {
+      tiempo = 3000;
+    }
+
+    setTimeout(cambiarLogo, tiempo);
+  }
+
+  setTimeout(cambiarLogo, 1000);
+
+  const cerrarPromo = document.querySelector('.ql-home-promo-close');
+  if (cerrarPromo) {
+    cerrarPromo.addEventListener('click', function () {
+      document.body.classList.add('ql-promo-closed');
+    });
+  }
+
+  const cerrarFecha = document.querySelector('.ql-home-course-date-close');
+  if (cerrarFecha) {
+    cerrarFecha.addEventListener('click', function () {
+      document.body.classList.add('ql-date-closed');
+    });
+  }
+
+  const botonMenu = document.getElementById('qlMobileMenuToggle');
+  const menuLinks = document.querySelector('.ql-home-nav-links');
+
+  if (botonMenu && menuLinks) {
+    botonMenu.addEventListener('click', function () {
+      menuLinks.classList.toggle('ql-menu-open');
+    });
+  }
+
+  const sucursalCards = document.querySelectorAll('.ql-sucursal-card');
+  const sucursalMap = document.getElementById('qlSucursalMap');
+  const sucursalSearch = document.getElementById('qlSucursalSearch');
+	
+const filterBtn = document.getElementById('qlFilterBtn');
+const filterMenu = document.getElementById('qlFilterMenu');
+const cityFilter = document.getElementById('qlCityFilter');
+const branchesFilter = document.getElementById('qlBranchesFilter');
+
+const sucursalesPorCiudad = {
+  Guadalajara: [
+    'Álamo',
+    'Américas',
+    'Autónoma',
+    'Aviación',
+    'Belenes',
+    'Chapultepec',
+    'Guadalupe',
+    'Independencia',
+    'Las Fuentes',
+    'Plaza del Sol',
+    'Revolución',
+    'Santa Anita',
+    'Tonalá'
+  ]
+};
+
+if (filterBtn && filterMenu && cityFilter && branchesFilter) {
+
+  filterBtn.addEventListener('click', function () {
+    filterMenu.classList.toggle('ql-filter-open');
+  });
+
+  cityFilter.addEventListener('change', function () {
+    const ciudad = cityFilter.value;
+    branchesFilter.innerHTML = '';
+
+    if (ciudad === 'Guadalajara') {
+      sucursalesPorCiudad.Guadalajara.forEach(function (sucursal) {
+        const btn = document.createElement('button');
+        btn.className = 'ql-branch-filter-btn';
+        btn.textContent = sucursal;
+
+        btn.addEventListener('click', function () {
+          sucursalSearch.value = sucursal;
+          sucursalSearch.dispatchEvent(new Event('input'));
+          filterMenu.classList.remove('ql-filter-open');
+        });
+
+        branchesFilter.appendChild(btn);
+      });
+    }
+  });
+}
+
+  if (sucursalCards.length && sucursalMap && sucursalSearch) {
+
+    function activarSucursal(card) {
+      sucursalCards.forEach(function (c) {
+        c.classList.remove('ql-sucursal-card-active');
+      });
+
+      card.classList.add('ql-sucursal-card-active');
+      sucursalMap.src = card.dataset.map;
+    }
+
+    sucursalCards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        activarSucursal(card);
+      });
+    });
+
+    sucursalSearch.addEventListener('input', function () {
+      const texto = sucursalSearch.value.toLowerCase().trim();
+      let primeraCoincidencia = null;
+
+      sucursalCards.forEach(function (card) {
+        const titulo = card.querySelector('h3');
+        const nombre = titulo ? titulo.textContent.toLowerCase() : '';
+
+        if (nombre.includes(texto)) {
+          card.style.display = 'block';
+
+          if (!primeraCoincidencia) {
+            primeraCoincidencia = card;
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (primeraCoincidencia) {
+        activarSucursal(primeraCoincidencia);
+      }
+    });
+  }
+
+});
+	
+	
+	
+</script>
+
+</body>
+</html>
