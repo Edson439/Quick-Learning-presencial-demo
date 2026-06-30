@@ -546,5 +546,71 @@
 		  qlNavLinks.classList.toggle('ql-menu-open');
 		});
 	</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const gruposEscalonados = [
+    '.ql-empresas-beneficios-card',
+    '.ql-presencial-mini-card',
+    '.ql-modalidades-card',
+    '.ql-razon-card',
+    '.ql-testimoniales-card',
+    '.ql-empresas-numero-card',
+    '.ql-blog-post-card'
+  ];
+
+const textos = [
+  '.ql-empresas-beneficios-title',
+  '.ql-presencial-cursos-title',
+  '.ql-sucursales-header',
+
+  '.ql-empresas-numeros-header h2',
+  '.ql-empresas-numeros-header p',
+
+  '.ql-empresas-cta-title',
+  '.ql-empresas-cta-text',
+  '.ql-empresas-cta-section .ql-home-hero-cta',
+
+  '.ql-form-step-title',
+  '.ql-form-photo',
+  '.ql-form-container',
+	
+    '.ql-footer-slogan',
+    '.ql-footer-contact',
+    '.ql-footer-links',
+    '.ql-footer-copy'
+];
+
+  gruposEscalonados.forEach(selector => {
+    document.querySelectorAll(selector).forEach((item, index) => {
+      item.classList.add('ql-reveal');
+      item.style.setProperty('--ql-delay', `${index * 180}ms`);
+    });
+  });
+
+  textos.forEach(selector => {
+    document.querySelectorAll(selector).forEach(item => {
+      item.classList.add('ql-reveal', 'ql-reveal-text');
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('ql-visible');
+      } else {
+        entry.target.classList.remove('ql-visible');
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  document.querySelectorAll('.ql-reveal').forEach(item => {
+    observer.observe(item);
+  });
+
+});
+</script>
 </body>
 </html>
