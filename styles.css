@@ -17,32 +17,32 @@ html {
 ================================ */
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-Light.ttf') format('truetype');
+  src: url('tipografia/Gilroy-Light.ttf') format('truetype');
   font-weight: 300;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-Regular.ttf') format('truetype');
+  src: url('tipografia/Gilroy-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-Medium.ttf') format('truetype');
+  src: url('tipografia/Gilroy-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-SemiBold.ttf') format('truetype');
+  src: url('tipografia/Gilroy-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-Bold.ttf') format('truetype');
+  src: url('tipografia/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('Tipografia/Gilroy-Heavy.ttf') format('truetype');
+  src: url('tipografia/Gilroy-Heavy.ttf') format('truetype');
   font-weight: 800;
 }
 body {
@@ -916,7 +916,7 @@ body {
   margin-bottom: 0;
 }
 /* ================================
-   P3 - SAL”N ANIMADO
+   P3 - SAL√ìN ANIMADO
 ================================ */
 
 .ql-p3-classroom-section {
@@ -4120,7 +4120,7 @@ body.ql-date-closed .ql-home-hero-section {
 }
 
 /* ================================
-   SOLO P¡GINA SUCURSALES - MAPA FULL
+   SOLO P√ÅGINA SUCURSALES - MAPA FULL
 ================================ */
 
 body.ql-sucursales-page .ql-sucursales-section {
@@ -4610,7 +4610,7 @@ body.ql-sucursales-page .ql-sucursales-map {
   .ql-blog-list-text p {
     font-size: 20px;
   }
-	/* BOT”N LEER M¡S */
+	/* BOT√ìN LEER M√ÅS */
 
 .ql-blog-read-btn{
     width: 270px;
@@ -4687,7 +4687,7 @@ body.ql-sucursales-page .ql-sucursales-map {
 .ql-blog-card-btn .ql-blog-read-text{
     font-size: 28px;
 }
-	/* LISTA DE ARTÕCULOS */
+	/* LISTA DE ART√çCULOS */
 
 .ql-blog-list-btn{
     width: 330px;
@@ -4771,7 +4771,7 @@ body.ql-sucursales-page .ql-sucursales-map {
     border-radius:28px;
 }
 
-/* ArtÌculo */
+/* Art√≠culo */
 
 .ql-blog-article-content{
     max-width:1250px;
@@ -5210,7 +5210,7 @@ body {
 }
 	
 	/* ================================
-   CELULAR - ARTÕCULO MIEDO
+   CELULAR - ART√çCULO MIEDO
 ================================ */
 
 .ql-miedo-featured {
@@ -5724,7 +5724,7 @@ body {
 }
 
 .ql-home-hero-building {
-  width: 410px;      /* TamaÒo */
+  width: 410px;      /* Tama√±o */
   left: 50%;
   bottom: 0px;       /* Sube o baja la imagen */
 
@@ -5858,7 +5858,7 @@ body {
   height: 190px;
 }
 
-/* SAL”N */
+/* SAL√ìN */
 
 .ql-p3-classroom-section {
   min-height: 430px;
