@@ -619,7 +619,7 @@ body {
 }
 
 .ql-home-hero-content {
-  max-width: 760px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 5;
@@ -945,16 +945,7 @@ body {
   animation: qlP3SpinPulse 5s linear infinite;
 }
 
-.ql-p3-people {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 3;
-  animation: qlP3PeopleScrollEffect linear both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 45%;
-}
+
 
 .ql-p3-star-right {
   position: absolute;
@@ -1008,16 +999,6 @@ body {
   }
 }
 
-@keyframes qlP3PeopleScrollEffect {
-  from {
-    opacity: 0;
-    transform: translateY(80px) scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
 @keyframes qlP3WaveUp {
   from {
@@ -1426,7 +1407,35 @@ body {
     transform: translateX(0);
   }
 }
+/* P3 - CHOQUE DE MANOS CONTROLADO CON SCROLL */
 
+.ql-p3-highfive {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ql-p3-person {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  height: auto;
+  display: block;
+  will-change: transform;
+}
+
+.ql-p3-left-person {
+  left: -10%;
+  transform: translateX(-180px);
+	    z-index: 20;
+}
+
+.ql-p3-right-person {
+  right: -10%;
+  transform: translateX(180px);
+}
 /* ================================
    CTA FINAL
 ================================ */
@@ -1435,6 +1444,7 @@ body {
   background: #325ea9;
   border-radius: 38px;
   min-height: 720px;
+
 
   display: flex;
   justify-content: center;
@@ -4640,7 +4650,7 @@ body.ql-sucursales-page .ql-sucursales-map {
 	
 	
 .ql-blog-read-btn{
-    width: 240px;
+    width: 320px;
     height: 82px;
     border-radius: 999px;
 }
@@ -5869,10 +5879,6 @@ body {
   display: none;
 }
 
-.ql-p3-people {
-  width: 150%;
-  left: -25%;
-}
 
 /* RAZONES */
 
@@ -6051,4 +6057,214 @@ body.ql-sucursales-page .ql-filter-menu {
   width: 100%;
   right: 0;
 }
+	
+.ql-p3-person {
+  width: 230%;
+  bottom: -15px;
 }
+
+.ql-p3-left-person {
+  left: -72%;
+  z-index: 20;
+}
+
+.ql-p3-right-person {
+  right: -72%;
+  z-index: 15;
+}
+}
+
+
+
+
+
+
+/* ================================
+   ANIMACIONES EXTRA - PRESENCIAL
+================================ */
+
+
+.ql-sucursales-panel {
+  animation: qlPanelEntrada linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes qlPanelEntrada {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ql-presencial-btn,
+.ql-cta-section .ql-home-hero-cta {
+  animation: qlBotonPulso 2.6s ease-in-out infinite;
+}
+
+@keyframes qlBotonPulso {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* ================================
+   ANIMACIONES LIMPIAS DEL SITIO
+================================ */
+/* ANIMACIÓN ESCALONADA - NO MUEVE EL DISEÑO */
+
+.ql-reveal {
+  opacity: 1;
+  transition:
+    opacity .75s ease,
+    transform .75s cubic-bezier(.22,1,.36,1);
+  transition-delay: var(--ql-delay, 0ms);
+}
+
+.ql-reveal:not(.ql-visible) {
+  opacity: 0;
+  transform: translateY(60px) scale(.96);
+}
+
+.ql-reveal-text:not(.ql-visible) {
+  transform: translateY(45px);
+}
+
+/* FORMULARIO - ANIMACIÓN COMO ANTES */
+
+.ql-form-step-title,
+.ql-form-photo,
+.ql-form-container {
+  opacity: 1;
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.ql-form-step-title:not(.ql-visible) {
+  opacity: 0;
+  transform: translateY(45px);
+}
+
+.ql-form-photo:not(.ql-visible) {
+  opacity: 0;
+  transform: translateX(-70px);
+}
+
+.ql-form-container:not(.ql-visible) {
+  opacity: 0;
+  transform: translateX(70px);
+}
+
+/* MOVIMIENTO SUTIL - VECTORES HERO PRESENCIAL */
+
+.ql-presencial-vector-1,
+.ql-presencial-vector-2 {
+  animation: qlVectorGiroSuave 9s linear infinite;
+  transform-origin: center;
+}
+
+.ql-presencial-vector-2 {
+  animation-duration: 12s;
+}
+
+@keyframes qlVectorGiroSuave {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ql-presencial-vector-3 {
+  animation: qlSerpienteSuave 5.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes qlSerpienteSuave {
+  0%, 100% {
+    transform: rotate(-28deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-26deg) translateY(-14px);
+  }
+}
+
+.ql-home-hero-cta{
+    position:relative;
+    overflow:hidden;
+}
+
+.ql-home-hero-cta::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+    transform:skewX(-25deg);
+
+    animation:qlBtnShine 5s infinite;
+}
+
+@keyframes qlBtnShine{
+    0%,70%{
+        left:-120%;
+    }
+    100%{
+        left:160%;
+    }
+}
+
+.ql-home-hero-subtitle-badge{
+    animation:qlBadgeMove 6s ease-in-out infinite;
+    transform-origin:center;
+}
+
+@keyframes qlBadgeMove{
+    0%,100%{
+        transform:rotate(-4deg);
+    }
+    50%{
+        transform:rotate(-1deg);
+    }
+}
+
+.ql-razon-icon{
+    animation:qlIconFloat 4s ease-in-out infinite;
+}
+
+.ql-razon-card:nth-child(2) .ql-razon-icon{
+    animation-delay:.8s;
+}
+
+.ql-razon-card:nth-child(3) .ql-razon-icon{
+    animation-delay:1.5s;
+}
+
+.ql-razon-card:nth-child(4) .ql-razon-icon{
+    animation-delay:2.2s;
+}
+
+.ql-razon-card:nth-child(5) .ql-razon-icon{
+    animation-delay:3s;
+}
+
