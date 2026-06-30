@@ -262,7 +262,10 @@
 
 	  <img class="ql-p3-star-left" src="images/p3_01.png" alt="Decoración estrella azul">
 
-	  <img class="ql-p3-people" src="images/p3_02.png" alt="Personas en clase">
+	  <div class="ql-p3-highfive">
+	  <img class="ql-p3-person ql-p3-left-person" src="images/izquierda.png" alt="">
+	  <img class="ql-p3-person ql-p3-right-person" src="images/derecha.png" alt="">
+	</div>
 
 	  <img class="ql-p3-star-right" src="images/p3_03.png" alt="Decoración esquina derecha">
 
@@ -661,6 +664,116 @@ window.addEventListener('scroll', function () {
   badge.style.transform = `rotate(${rotation}deg)`;
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+  const gruposEscalonados = [
+    '.ql-modalidades-card',
+    '.ql-razon-card',
+    '.ql-testimoniales-card'
+  ];
+
+  const textos = [
+    '.ql-home-hero-title',
+    '.ql-home-hero-subtitle-badge',
+    '.ql-home-hero-text',
+    '.ql-home-hero-cta',
+
+    '.ql-modalidades-title-red',
+    '.ql-modalidades-title-main',
+    '.ql-modalidades-intro',
+
+    '.ql-razones-header h2',
+    '.ql-razones-header p',
+
+    '.ql-testimoniales-title',
+    '.ql-testimoniales-subtitle',
+
+    '.ql-empresas-title',
+    '.ql-empresas-subtitle',
+
+    '.ql-cta-title',
+    '.ql-cta-text',
+    '.ql-cta-section .ql-home-hero-cta',
+    '.ql-cta-character',
+
+    '.ql-form-step-title',
+    '.ql-form-photo',
+    '.ql-form-container',
+
+    '.ql-footer-slogan',
+    '.ql-footer-contact',
+    '.ql-footer-links',
+    '.ql-footer-copy'
+  ];
+
+  gruposEscalonados.forEach(selector => {
+    document.querySelectorAll(selector).forEach((item, index) => {
+      item.classList.add('ql-reveal');
+      item.style.setProperty('--ql-delay', `${index * 180}ms`);
+    });
+  });
+
+  textos.forEach(selector => {
+    document.querySelectorAll(selector).forEach(item => {
+      item.classList.add('ql-reveal', 'ql-reveal-text');
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('ql-visible');
+      } else {
+        entry.target.classList.remove('ql-visible');
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  document.querySelectorAll('.ql-reveal').forEach(item => {
+    observer.observe(item);
+  });
+
+});
+</script>
+	<script>
+window.addEventListener('scroll', function () {
+  const section = document.querySelector('.ql-p3-classroom-section');
+  const leftPerson = document.querySelector('.ql-p3-left-person');
+  const rightPerson = document.querySelector('.ql-p3-right-person');
+
+  if (!section || !leftPerson || !rightPerson) return;
+
+  const rect = section.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  let progress = 1 - (rect.top / vh);
+  progress = Math.max(0, Math.min(progress, 1));
+
+const esCelular = window.innerWidth <= 768;
+
+let leftMove;
+let rightMove;
+
+if (esCelular) {
+
+    // Recorrido para celular
+leftMove = -90 + (120 * progress);
+rightMove = 90 - (120 * progress);
+
+} else {
+
+    // Recorrido para escritorio
+    leftMove = -100 + (300 * progress);
+    rightMove = 100 - (300 * progress);
+
+}
+
+leftPerson.style.transform = `translateX(${leftMove}px)`;
+rightPerson.style.transform = `translateX(${rightMove}px)`;
+});
+</script>
 </body>
 </html>
