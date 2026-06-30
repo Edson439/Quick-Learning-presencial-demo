@@ -933,5 +933,71 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+	<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const gruposEscalonados = [
+    '.ql-presencial-mini-card'
+  ];
+
+  const textos = [
+    '.ql-presencial-title',
+    '.ql-presencial-text',
+    '.ql-presencial-btn',
+
+    '.ql-presencial-cursos-title',
+    '.ql-presencial-cursos-header p',
+
+    '.ql-sucursales-header h2',
+    '.ql-sucursales-header p',
+    '.ql-sucursales-panel',
+    '.ql-sucursales-map',
+
+    '.ql-cta-title',
+    '.ql-cta-text',
+    '.ql-cta-section .ql-home-hero-cta',
+    '.ql-cta-character',
+
+    '.ql-form-step-title',
+    '.ql-form-photo',
+    '.ql-form-container',
+	  
+	'.ql-footer-slogan',
+    '.ql-footer-contact',
+    '.ql-footer-links',
+    '.ql-footer-copy'
+  ];
+
+  gruposEscalonados.forEach(selector => {
+    document.querySelectorAll(selector).forEach((item, index) => {
+      item.classList.add('ql-reveal');
+      item.style.setProperty('--ql-delay', `${index * 180}ms`);
+    });
+  });
+
+  textos.forEach(selector => {
+    document.querySelectorAll(selector).forEach(item => {
+      item.classList.add('ql-reveal', 'ql-reveal-text');
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('ql-visible');
+      } else {
+        entry.target.classList.remove('ql-visible');
+      }
+    });
+  }, {
+    threshold: 0.18
+  });
+
+  document.querySelectorAll('.ql-reveal').forEach(item => {
+    observer.observe(item);
+  });
+
+});
+</script>
 </body>
 </html>
