@@ -4341,6 +4341,22 @@ body.ql-sucursales-page .ql-sucursales-map {
   transform: translate(-50%, -50%) scale(0.4);
 }
 	
+	.ql-p3-classroom-section
+ {
+	}
+	.ql-p3-red-wave-left {
+  left: -190px;
+  bottom: -150px;
+  width: 42%;
+
+}
+
+.ql-p3-red-wave-right {
+
+  right: -190px;
+  bottom: -114px;
+  width: 48%;
+}
 	
 	
 	.ql-modalidades-title-red {
