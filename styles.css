@@ -4877,7 +4877,7 @@ body {
     left: 0;
     width: 100%;
     background: #223267;
-    z-index: 20;
+    z-index: 10001 !important;
     padding: 15px 0;
 	border: none;
   }
@@ -5386,7 +5386,11 @@ body {
 .ql-form-button {
   margin: 18px auto 0;
 }
-	
+
+.ql-home-contact-button:hover .ql-home-contact-text-img
+	{
+    transform: translateX(43px);
+}
 	
 	
 	/* ================================
@@ -5394,7 +5398,7 @@ body {
 ================================ */
 
 .ql-empresas-beneficios-section {
-  padding: 70px 20px 80px;
+  padding: 70px 20px 40px;
 }
 
 .ql-empresas-beneficios-title {
@@ -5436,7 +5440,7 @@ body {
 }
 
 .ql-empresas-numeros-section {
-  padding: 70px 20px 80px;
+  padding: 70px 20px 0px;
 }
 
 .ql-empresas-numeros-cards {
@@ -5487,9 +5491,14 @@ body {
 }
 
 .ql-empresas-logos-section {
-  padding: 20px 0 70px;
+  padding: 0px 0 70px;
 }
 
+.ql-home-hero-cta {
+	    min-width: 195px;
+	}
+	
+	
 .ql-empresa-pill {
   height: 56px;
   font-size: 20px;
@@ -5627,7 +5636,7 @@ body {
 /* CURSOS PRESENCIALES */
 
 .ql-presencial-cursos-section {
-  padding: 70px 20px 90px;
+  padding: 70px 20px 30px;
 }
 .ql-presencial-cursos-title {
   font-size: 28px;
@@ -5673,8 +5682,8 @@ body {
 
 /* SUCURSALES */
 .ql-sucursales-section {
-  padding: 70px 20px 90px;
-  height: 1340px;
+  padding: 0px 20px 90px;
+  height: 1153px;
 }
 .ql-sucursales-header h2 {
   font-size: 38px;
@@ -5848,7 +5857,7 @@ body {
 /* MODALIDADES */
 
 .ql-modalidades-section {
-  padding: 70px 20px 90px;
+  padding: 70px 20px 20px;
   margin-top: -20px;
 }
 
@@ -5904,7 +5913,7 @@ body {
 
 /* RAZONES */
 .ql-razones-section {
-  padding: 75px 20px 90px;
+  padding: 75px 20px 0px;
 }
 .ql-razones-header h2 {
   font-size: 40px;
@@ -6030,10 +6039,12 @@ body.ql-sucursales-page .ql-sucursales-filter-btn {
   font-size: 28px;
 }
 body.ql-sucursales-page .ql-sucursales-list {
-  height: 360px;
+  height: 560px;
   overflow-y: auto;
   padding: 0 8px 0 0;
 }
+	
+	
 body.ql-sucursales-page .ql-sucursal-card {
   width: 100%;
   padding: 24px;
@@ -6071,6 +6082,24 @@ body.ql-sucursales-page .ql-filter-menu {
   padding: 8px 12px 8px;
 border-radius: 10px;
 }
+	
+	  body.ql-sucursales-page{
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  body.ql-sucursales-page .ql-sucursales-section{
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  body.ql-sucursales-page .ql-sucursales-content{
+    height: auto !important;
+    overflow: visible !important;
+  }
 }
 
 
