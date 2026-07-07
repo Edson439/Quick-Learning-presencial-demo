@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+	overflow: hidden;
+    background:transparent;
+    padding:30px;
+	
+}
+
+svg{
+    width:320px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    overflow:visible;
+}
+
+#globo1,
+#globo2,
+#globo3{
+    opacity:0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: aparecerGlobo 3s ease-in-out infinite;
+}
+
+#globo1{
+    animation-delay: 0s;
+}
+
+#globo2{
+    animation-delay: .35s;
+}
+
+#globo3{
+    animation-delay: .7s;
+}
+
+@keyframes aparecerGlobo{
+    0%{
+        opacity:0;
+        transform: scale(.55) translateY(18px);
+    }
+
+    15%{
+        opacity:1;
+        transform: scale(1.08) translateY(-4px);
+    }
+
+    25%{
+        opacity:1;
+        transform: scale(1) translateY(0);
+    }
+
+    75%{
+        opacity:1;
+        transform: scale(1) translateY(0);
+    }
+
+    100%{
+        opacity:0;
+        transform: scale(.55) translateY(18px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 360.5 385.9">
+
+<style>
+  .st0{fill:#BCD5EA;stroke:#1B243E;stroke-width:6.79;stroke-miterlimit:10;}
+  .st1{fill:#FFFFFF;stroke:#1B243E;stroke-width:7.01;stroke-miterlimit:10;}
+  .st2{fill:#BCD5EA;stroke:#1B243E;stroke-width:5.76;stroke-miterlimit:10;}
+</style>
+
+<path id="globo3" class="st0" d="M357.1,93.8c0-47.9-35.5-87.1-80.3-90.2v0h-0.7c-1.7-0.1-3.3-0.2-5-0.2c-1.7,0-3.4,0.1-5,0.2h-95.9
+c-1.7-0.1-3.3-0.2-5-0.2c-47.5,0-86,40.5-86,90.4s38.5,90.4,86,90.4h107.2c9.6,8.8,19.1,17.7,28.7,26.5c2.7,2.5,6.7,3.1,10,1.5
+c3-1.5,4.8-4.6,4.8-8l0.3-33.3C340.7,154.9,357.1,126.4,357.1,93.8L357.1,93.8z"/>
+
+<path id="globo2" class="st1" d="M154.9,137c-1.3,0-2.6,0.1-4,0.1H75.3c-1.3-0.1-2.6-0.1-4-0.1s-2.7,0.1-4,0.1h-0.5v0
+c-35.4,2.4-63.3,33.3-63.3,71.1c0,25.7,13,48.2,32.4,60.7l0.2,26.2c0,2.7,1.4,5.1,3.8,6.3c2.5,1.3,5.7,0.8,7.9-1.2
+c7.5-7,15.1-13.9,22.6-20.9h84.5c37.5,0,67.8-31.9,67.8-71.3S192.3,137,154.9,137L154.9,137z"/>
+
+<path id="globo1" class="st2" d="M162.6,247.2c1.1,0,2.2,0,3.2,0.1H228c1.1-0.1,2.2-0.1,3.2-0.1s2.2,0,3.2,0.1h0.4v0
+c29,2,52,27.4,52,58.4c0,21.1-10.6,39.6-26.6,49.9l-0.2,21.6c0,2.2-1.2,4.2-3.1,5.2c-2.1,1.1-4.7,0.7-6.5-1
+c-6.2-5.7-12.4-11.4-18.6-17.1h-69.4c-30.8,0-55.7-26.2-55.7-58.5C106.9,273.4,131.9,247.2,162.6,247.2L162.6,247.2z"/>
+
+</svg>
+
+</body>
+</html>

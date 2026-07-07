@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    background:transparent;
+    padding:30px;
+}
+
+svg{
+    width:320px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    overflow:visible;
+}
+
+#globo1,
+#globo2,
+#globo3{
+    opacity:0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: aparecerGlobo 2.85s ease-in-out infinite;
+}
+
+#globo3{ animation-delay: 0s; }
+#globo2{ animation-delay: .35s; }
+#globo1{ animation-delay: .7s; }
+
+@keyframes aparecerGlobo{
+    0%{
+        opacity:0;
+        transform: scale(.55) translateY(18px);
+    }
+
+    15%{
+        opacity:1;
+        transform: scale(1.08) translateY(-4px);
+    }
+
+    25%{
+        opacity:1;
+        transform: scale(1) translateY(0);
+    }
+
+    75%{
+        opacity:1;
+        transform: scale(1) translateY(0);
+    }
+
+    100%{
+        opacity:0;
+        transform: scale(.55) translateY(18px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 348.2 373.4" style="enable-background:new 0 0 348.2 373.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#1B243E;stroke-width:6.77;stroke-miterlimit:10;}
+	.st1{fill:#BCD5EA;stroke:#1B243E;stroke-width:6.56;stroke-miterlimit:10;}
+</style>
+<path id="globo1" class="st0" d="M3.4,90.7C3.4,44.4,37.6,6.6,81,3.6v0h0.7c1.6-0.1,3.2-0.2,4.8-0.2s3.2,0.1,4.8,0.2h92.7
+	c1.6-0.1,3.2-0.2,4.8-0.2c45.9,0,83.1,39.1,83.1,87.3S234.7,178,188.8,178H85.2c-9.2,8.5-18.5,17.1-27.7,25.6
+	c-2.6,2.4-6.5,3-9.6,1.4c-2.9-1.4-4.7-4.5-4.6-7.8L43,165.1C19.3,149.7,3.4,122.2,3.4,90.7z"/>
+<path id="globo2" class="st1" d="M198.7,132.4c1.3,0,2.6,0.1,3.8,0.1h73.1c1.3-0.1,2.5-0.1,3.8-0.1s2.6,0.1,3.8,0.1h0.5v0
+	c34.1,2.4,61.2,32.2,61.2,68.7c0,24.8-12.5,46.6-31.3,58.7l-0.2,25.4c0,2.6-1.4,5-3.6,6.1c-2.5,1.2-5.5,0.8-7.6-1.1
+	c-7.3-6.7-14.5-13.5-21.8-20.2h-81.6c-36.2,0-65.5-30.8-65.5-68.8S162.5,132.4,198.7,132.4L198.7,132.4z"/>
+<path id="globo3" class="st0" d="M191.2,238.9c-1.1,0-2.1,0-3.1,0.1h-60c-1-0.1-2.1-0.1-3.1-0.1s-2.1,0-3.1,0.1h-0.4v0
+	c-28.1,1.9-50.2,26.4-50.2,56.4c0,20.4,10.3,38.2,25.7,48.2l0.2,20.8c0,2.1,1.1,4.1,3,5c2,1,4.5,0.7,6.2-0.9
+	c6-5.5,11.9-11,17.9-16.6h67.1c29.7,0,53.8-25.3,53.8-56.5S220.9,238.8,191.2,238.9L191.2,238.9z"/>
+</svg>
+
+</body>
+</html>
