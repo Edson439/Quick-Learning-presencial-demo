@@ -339,8 +339,8 @@
 		<div class="ql-testimoniales-card ql-testimoniales-card-left">
 
 		  <video
-			src="videos/testimonio1.mp4"
-			poster="videos/testimonio1.png"
+			src="videos/Testimonio1.mp4"
+			poster="videos/Testimonio1.png"
 			playsinline>
 		  </video>
 
@@ -350,8 +350,8 @@
 
 		  <div class="ql-testimoniales-card ql-testimoniales-card-center">
 			<video
-			  src="videos/testimonio2.mp4"
-			  poster="videos/testimonio2.png"
+			  src="videos/Testimonio2.mp4"
+			  poster="videos/Testimonio2.png"
 			  playsinline>
 			</video>
 			<img class="ql-video-btn" src="images/play.png" alt="Play">
@@ -359,8 +359,8 @@
 
 		  <div class="ql-testimoniales-card ql-testimoniales-card-right">
 			<video
-			  src="videos/testimonio3.mp4"
-			  poster="videos/testimonio3.png"
+			  src="videos/Testimonio3.mp4"
+			  poster="videos/Testimonio3.png"
 			  
 			  playsinline>
 			</video>
@@ -600,15 +600,28 @@
 			});
 		  }
 
-		  const botonMenu = document.getElementById('qlMobileMenuToggle');
-		  const menuLinks = document.querySelector('.ql-home-nav-links');
+			const botonMenu = document.getElementById('qlMobileMenuToggle');
+			const menuLinks = document.querySelector('.ql-home-nav-links');
 
-		  if (botonMenu && menuLinks) {
-			botonMenu.addEventListener('click', function () {
-			  menuLinks.classList.toggle('ql-menu-open');
-			});
-		  }
+			if (botonMenu && menuLinks) {
 
+			  botonMenu.addEventListener('click', function () {
+				menuLinks.classList.toggle('ql-menu-open');
+			  });
+
+			  // Cerrar el menú al seleccionar una opción
+			  menuLinks.querySelectorAll('a').forEach(link => {
+
+				link.addEventListener('click', function () {
+
+				  menuLinks.classList.remove('ql-menu-open');
+
+				});
+
+			  });
+
+			}
+			
 		});
 	</script>
 
