@@ -68,7 +68,7 @@
       </button>
     <div class="ql-home-course-date" id="courseDateBar">
     <span class="ql-home-course-date-text">
-      Próximo inicio de curso:&nbsp;<strong><br>20 de abril</strong>
+      🚀 Próximo inicio de curso:&nbsp;<strong>20 de abril</strong>
     </span>
 
     <button class="ql-home-course-date-close">×</button>
@@ -336,17 +336,15 @@
 
 		<div class="ql-testimoniales-cards">
 
-		<div class="ql-testimoniales-card ql-testimoniales-card-left">
-
-		  <video
-			src="videos/testimonio1.mp4"
-			poster="videos/testimonio1.png"
-			playsinline>
-		  </video>
-
-		  <img class="ql-video-btn" src="images/play.png" alt="Play">
-
-		</div>
+		  <div class="ql-testimoniales-card ql-testimoniales-card-right">
+			<video
+			  src="videos/testimonio3.mp4"
+			  poster="videos/testimonio3.png"
+			  
+			  playsinline>
+			</video>
+			<img class="ql-video-btn" src="images/play.png" alt="Play">
+		  </div>
 
 		  <div class="ql-testimoniales-card ql-testimoniales-card-center">
 			<video
@@ -357,15 +355,18 @@
 			<img class="ql-video-btn" src="images/play.png" alt="Play">
 		  </div>
 
-		  <div class="ql-testimoniales-card ql-testimoniales-card-right">
-			<video
-			  src="videos/testimonio3.mp4"
-			  poster="videos/testimonio3.png"
-			  
-			  playsinline>
-			</video>
-			<img class="ql-video-btn" src="images/play.png" alt="Play">
-		  </div>
+
+		  <div class="ql-testimoniales-card ql-testimoniales-card-left">
+
+		  <video
+			src="videos/testimonio1.mp4"
+			poster="videos/testimonio1.png"
+			playsinline>
+		  </video>
+
+		  <img class="ql-video-btn" src="images/play.png" alt="Play">
+
+		</div>
 
 		</div>
 
@@ -500,13 +501,12 @@
           <input type="email" placeholder="Correo">
           <input type="text" placeholder="Teléfono">
 
-          <select>
-            <option>Ciudad</option>
-          </select>
-
-          <select>
-            <option>Tipo de Curso</option>
-          </select>
+			<select>
+			  <option value="" selected disabled>Tipo de Curso</option>
+			  <option value="presencial">Presencial</option>
+			  <option value="virtual">Virtual</option>
+			  <option value="online">Online</option>
+			</select>
 
           <label class="ql-checkbox">
             <input type="checkbox">
@@ -788,7 +788,7 @@
 		  let progress = 1 - (rect.top / vh);
 		  progress = Math.max(0, Math.min(progress, 1));
 
-		  const movimiento = 180 - (180 * progress);
+		  const movimiento = 580 - (580 * progress);
 
 		  personaje.style.transform = `translateX(${movimiento}px)`;
 
@@ -833,45 +833,149 @@
 
 		});
 	</script>
+	<script>
+	document.querySelectorAll('.ql-testimoniales-card').forEach(card => {
+
+		const video = card.querySelector('video');
+		const btn = card.querySelector('.ql-video-btn');
+
+		function mostrarPlay(){
+			btn.src = "images/play.png";
+			btn.style.display = "block";
+		}
+
+		function ocultarPlay(){
+			btn.style.display = "none";
+		}
+
+		card.addEventListener('click', () => {
+
+			if(video.paused){
+
+				video.play();
+				ocultarPlay();
+
+			}else{
+
+				video.pause();
+				mostrarPlay();
+
+			}
+
+		});
+
+		video.addEventListener('ended', () => {
+
+			video.currentTime = 0;
+			mostrarPlay();
+
+		});
+
+	});
+	</script>
 <script>
-document.querySelectorAll('.ql-testimoniales-card').forEach(card => {
+window.addEventListener('scroll', function () {
 
-    const video = card.querySelector('video');
-    const btn = card.querySelector('.ql-video-btn');
+  if (window.innerWidth > 768) return;
 
-    function mostrarPlay(){
-        btn.src = "images/play.png";
-        btn.style.display = "block";
-    }
+  const barra = document.querySelector('.ql-modalidades-title-red');
+  if (!barra) return;
 
-    function ocultarPlay(){
-        btn.style.display = "none";
-    }
+  const rect = barra.getBoundingClientRect();
+  const vh = window.innerHeight;
 
-    card.addEventListener('click', () => {
+  // Progreso de 0 a 1 mientras entra en pantalla
+  let progress = (vh - rect.top) / vh;
+  progress = Math.max(0, Math.min(progress, 1));
 
-        if(video.paused){
+  // De -4° a 0° de forma continua
+  const rotacion = -4 + (4 * progress);
 
-            video.play();
-            ocultarPlay();
-
-        }else{
-
-            video.pause();
-            mostrarPlay();
-
-        }
-
-    });
-
-    video.addEventListener('ended', () => {
-
-        video.currentTime = 0;
-        mostrarPlay();
-
-    });
+	barra.style.setProperty('transform', `rotate(${rotacion}deg)`, 'important');
 
 });
+	
+</script>
+	<script>
+window.addEventListener('scroll', () => {
+
+  const barra = document.querySelector('.ql-testimoniales-million');
+  if (!barra) return;
+
+  // Escritorio: dejar que el CSS haga la animación
+  if (window.innerWidth > 768) {
+    barra.style.removeProperty('transform');
+    return;
+  }
+
+  // Celular
+  const rect = barra.getBoundingClientRect();
+
+  let p = (window.innerHeight - rect.top) / window.innerHeight;
+  p = Math.max(0, Math.min(1, p));
+
+  const rot = 3 - (3 * p);
+
+  barra.style.setProperty(
+    'transform',
+    `rotate(${rot}deg)`,
+    'important'
+  );
+
+});
+</script>
+	<script>
+function moverBarraEmpresasHome() {
+  const barra = document.querySelector('.ql-empresas-title span');
+  if (!barra) return;
+
+  if (window.innerWidth > 768) {
+    barra.style.removeProperty('--ql-empresas-rotacion');
+    return;
+  }
+
+  const rect = barra.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  let progress = (vh - rect.top) / vh;
+  progress = Math.max(0, Math.min(progress, 1));
+
+  const rotacion = -4 + (4 * progress);
+
+  barra.style.setProperty('--ql-empresas-rotacion', rotacion + 'deg');
+}
+
+window.addEventListener('scroll', moverBarraEmpresasHome);
+window.addEventListener('resize', moverBarraEmpresasHome);
+document.addEventListener('DOMContentLoaded', moverBarraEmpresasHome);
+</script>
+	<script>
+function moverBarraPrimerPaso() {
+
+  if (window.innerWidth > 768) return;
+
+  const barra = document.querySelector('.ql-form-step-title span');
+  if (!barra) return;
+
+  const rect = barra.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  let progress = (vh - rect.top) / vh;
+  progress = Math.max(0, Math.min(progress, 1));
+
+  const rotacion = -4 + (4 * progress);
+
+  barra.style.setProperty(
+    'transform',
+    `rotate(${rotacion}deg)`,
+    'important'
+  );
+
+}
+
+window.addEventListener('scroll', moverBarraPrimerPaso);
+window.addEventListener('resize', moverBarraPrimerPaso);
+document.addEventListener('DOMContentLoaded', moverBarraPrimerPaso);
 </script>
 </body>
 </html>
