@@ -166,7 +166,7 @@ body {
   margin-top: 0;
   border-radius: 0;
   border: none;
-  border-bottom: 8px solid #212c51;
+  border-bottom: 3px solid #212c51;
   box-shadow: none;
 }
 .ql-logo-link {
@@ -232,26 +232,26 @@ body {
   background: #1a2a57;
   transform: translateY(-2px);
 }
+
 .ql-home-course-date {
 display: flex;
 align-items: center;
 justify-content: center;
-  position: static;
-    margin-top: 15px;
-    align-self: center;
-  width: 240px;
-  height: 50px;
-  padding: 0px 48px 0 28px;
-
-  background: #325ea9;
-  color: #ffffff;
-  border-radius: 0 0 22px 22px;
-  border: 4px solid #212c51;
-  border-top: none;
-  box-shadow: 2px 2px 0 #212c51;
-
-  z-index: 2;
+position: static;
+margin-top: 15px;
+align-self: center;
+width: 330px;
+height: 50px;
+padding: 0px 48px 0 28px;
+background: #ffffff;
+color: #325ea9;
+border-radius: 0 0 18px 18px;
+border: 3px solid #212c51;
+border-top: none;
+z-index: 2;
+font-weight: 500; 
 }
+
 /* BOTN VERDE "EMPIEZA HOY" DEL MEN */
 .ql-home-contact-button {
   height: 50px;
@@ -442,7 +442,7 @@ justify-content: center;
   text-shadow: 0 3px 0 #1a5f28;
 }
 .ql-home-cta-text-img {
-  height: 25px;
+  height: 28px;
   width: auto;
   display: block;
 
@@ -1144,7 +1144,9 @@ justify-content: center;
     cursor:pointer;
     z-index:5;
     transition:.25s;
-	
+	opacity: .6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .45);
+	border-radius: 50%;
 }
 
 .ql-video-btn:hover{
@@ -1440,7 +1442,7 @@ justify-content: center;
 
 .ql-form-section {
   background: #ffffff;
-  padding: 95px 40px 120px;
+  padding: 0px 40px 120px;
 }
 .ql-form-step-title {
   text-align: center;
@@ -1536,7 +1538,7 @@ justify-content: center;
 
 .ql-form-side h2 {
   color: #223267;
-  font-size: 42px;
+  font-size: 32px;
   line-height: 0.95;
   font-weight: 700;
   letter-spacing: -1px;
@@ -1570,12 +1572,12 @@ justify-content: center;
 .ql-form-grid input,
 .ql-form-grid select {
   width: 100%;
-  height: 42px;
+  height: 55px;
   border: 3px solid #223267;
   border-radius: 7px;
   padding: 0 18px;
   font-family: 'Gilroy';
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: #223267;
   outline: none;
@@ -1644,7 +1646,7 @@ justify-content: center;
 }
 
 .ql-form-text-img {
-  height: 22px;
+  height: 25px;
   width: auto;
   position: relative;
   z-index: 3;
@@ -1984,7 +1986,7 @@ justify-content: center;
   height:250px;
   left: 36.4%;
   top: 13.4%;
-  transform:translate(-50%, -50%) scale(.55);
+  transform:translate(-50%, -50%) scale(.4);
 }
 
 .ql-doodle-globos-2{
@@ -1992,15 +1994,15 @@ justify-content: center;
   height:240px;
   left: 32.3%;
   top: 55.3%;
-  transform:translate(-50%, -50%) scale(.6);
+  transform:translate(-50%, -50%) scale(.4);
 }
 
 .ql-doodle-globos-3 {
   width:220px;
   height:230px;
   left:53%;
-  top: 55%;
-  transform:translate(-50%, -50%) scale(.6);
+  top: 58%;
+  transform:translate(-50%, -50%) scale(.4);
 }
 
 .ql-doodle-globos-4 {
@@ -2008,7 +2010,7 @@ justify-content: center;
   height:230px;
   left:66.5%;
   top:12%;
-  transform:translate(-50%, -50%) scale(.4);
+  transform:translate(-50%, -50%) scale(.3);
 }
 
 
@@ -2110,7 +2112,7 @@ justify-content: center;
   animation: qlEmpresasCtaStraight linear both;
   animation-timeline: --empresasCtaScroll;
   animation-range: entry 10% cover 45%;
-  height: 106px;
+  height: 104px;
 }
 
 .ql-empresas-cta-text {
@@ -3044,7 +3046,7 @@ justify-content: center;
 	transform: rotate(-4deg);
 	transform-origin: center;
 	transition: transform 0.15s linear;
-	height: 98px; 
+	height: 94px; 
 }
 
 .ql-empresas-numeros-header p {
@@ -3107,7 +3109,7 @@ justify-content: center;
 .ql-blog-page {
   background: #ffffff;
   color: #223267;
-  padding: 80px 40px 120px;
+  padding: 80px 40px 0px;
 }
 
 .ql-blog-hero {
@@ -3340,8 +3342,8 @@ justify-content: center;
 }
 
 .ql-blog-read-btn:hover .ql-blog-read-icon-left svg {
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
 }
 
 .ql-blog-featured-image img {
@@ -3422,13 +3424,13 @@ justify-content: center;
 }
 
 .ql-blog-card-btn .ql-blog-read-icon {
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
 }
 
 .ql-blog-card-btn .ql-blog-read-icon svg {
-  width: 17px;
-  height: 17px;
+  width: 26px;
+  height: 26px;
 }
 
 /* ================================
@@ -3493,8 +3495,8 @@ justify-content: center;
 }
 
 .ql-blog-list-text .ql-blog-read-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
 }
 
 /* BOTN VER MS */
@@ -3575,8 +3577,8 @@ justify-content: center;
 }
 
 .ql-blog-card-btn:hover .ql-blog-read-icon-left svg {
-  width: 17px;
-  height: 17px;
+  width: 26px;
+  height: 26px;
   stroke: #ffffff;
 }
 
@@ -3721,15 +3723,12 @@ body.ql-promo-closed .ql-home-hero-section {
   top: 64px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-
-  width: 245px;
-  height: 50px;
+  width: 330px;
+  height: 36px;
   margin: 0 !important;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 14px;
   line-height: 1.05;
 }
@@ -3739,17 +3738,14 @@ body.ql-promo-closed .ql-home-course-date{
 .ql-home-course-date-close {
   position: absolute;
   right: 18px;
-  top: 50%;
+  top: 44%;
   transform: translateY(-50%);
-
   background: transparent;
   border: none;
-
-  color: #ffffff;
+  color: #325ea9;
   font-size: 34px;
   font-weight: 300;
   line-height: 1;
-
   cursor: pointer;
 }
 .ql-home-course-date {
@@ -4197,6 +4193,10 @@ top: 51%;
     transform: translateX(-50%) translateY(10px);
   }
 }
+
+
+
+
 /* AJUSTE PARA PANTALLAS GRANDES / 4K */
 @media (min-width: 2200px) {
 
@@ -4267,28 +4267,28 @@ top: 51%;
  	 top: 29.9%; 
   }
 	
-	.ql-doodle-globos-1{
+	.ql-doodle-globos-1 {
 	  left: 35.4%;
-	  top: 13.4%;
-	  transform:translate(-50%, -50%) scale(.8);
+	  top: 16.4%;
+	  transform:translate(-50%, -50%) scale(.5);
 	}
 
-	.ql-doodle-globos-2{
+	.ql-doodle-globos-2 {
 	  left: 35.8%;
-	  top: 62.3%;
-	  transform:translate(-50%, -50%) scale(.8);
+	  top: 64.3%;
+	  transform:translate(-50%, -50%) scale(.5);
 	}
 
 	.ql-doodle-globos-3 {
 	  left:51.5%;
-	  top: 63%;
-	  transform:translate(-50%, -50%) scale(.8);
+	  top: 65%;
+	  transform:translate(-50%, -50%) scale(.5);
 	}
 
 	.ql-doodle-globos-4 {
-	  left: 65.5%;
-	  top: 12%;
-	  transform:translate(-50%, -50%) scale(.6);
+	  left: 65%;
+	  top: 13%;
+	  transform:translate(-50%, -50%) scale(.4);
 	}
 	
 	.ql-p3-classroom-section
@@ -4475,12 +4475,13 @@ top: 51%;
 }				
 	.ql-empresas-numeros-header h2 span {
     padding: 5px 32px 0px;
-	height: auto;
+	height: 98px;
+	
 }	
 	
 	.ql-empresas-cta-title span {
     font-size: 88px;
-	height: auto;
+	height: 106px;
 }	
   .ql-empresas-cta-title {
     font-size: 100px;
@@ -4491,7 +4492,7 @@ top: 51%;
 }	
 	
   .ql-blog-page {
-    padding: 90px 70px 100px;
+    padding: 90px 70px 0px;
   }
 
   .ql-blog-hero {
@@ -4787,7 +4788,6 @@ top: 51%;
 .ql-mobile-menu-toggle {
   display: none;
 }	
-
 /* ================================
    CELULAR 
 ================================ */
@@ -4889,43 +4889,27 @@ body {
     padding: 12px 0;
   }
 
-.ql-home-course-date{
-  position: fixed;
-  top: 120px;              /* ajusta si hace falta 115–125 */
-  left: 50%;
-  transform: translateX(-50%);
-
+.ql-home-course-date {
   width: 330px;
-  max-width: calc(100vw - 24px);
-
-  height: 50px;
+  height: 40px;
   padding: 10px 48px 0 28px;
-
-  background: #325ea9;
-  color: #fff;
-  border-radius: 0 0 22px 22px;
-  border: 4px solid #212c51;
   border-top: none;
-  box-shadow: 2px 2px 0 #212c51;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  z-index: 999;
 }
-.ql-home-course-date{
-    position: fixed !important;
+	
 
+	
+.ql-home-course-date {
+    position: fixed !important;
     top: 118px;          /* ajusta este valor si hace falta */
     left: 50% !important;
     transform: translateX(-50%) !important;
-
-    width: 330px;
     max-width: calc(100vw - 24px);
-
     margin: 72px 0 0 0 !important;
     z-index: 9999;
+	font-weight: 500;
 }
 	
 	
@@ -4968,9 +4952,9 @@ body {
   }
 
   .ql-home-course-date {
-    width: 60%;
+    width: 90%;
     font-size: 15px;
-    padding: 10px 20px 0 0;
+    padding: 0px 20px 0 0;
   }
 
   .ql-privacy-section {
@@ -5125,7 +5109,7 @@ body {
 ================================ */
 
 .ql-blog-page {
-  padding: 60px 20px 70px;
+  padding: 60px 20px 0px;
 }
 
 .ql-blog-top {
@@ -5373,8 +5357,8 @@ body {
 
 .ql-form-grid input,
 .ql-form-grid select {
-  height: 44px;
-  font-size: 15px;
+  height: 55px;
+  font-size: 22px;
 }
 
 .ql-checkbox {
@@ -5560,28 +5544,28 @@ body {
     background: #000;
 }
 
-	.ql-doodle-globos-1{
+	.ql-doodle-globos-1 {
 	  left: 34.4%;
-	  top: 0.4%;
-	  transform:translate(-50%, -50%) scale(.3);
+	  top: 4.4%;
+	  transform:translate(-50%, -50%) scale(.2);
 	}
 
-	.ql-doodle-globos-2{
+	.ql-doodle-globos-2 {
 	  left: 25%;
-	  top: 40%;
-	  transform:translate(-50%, -50%) scale(.3);
+	  top: 43%;
+	  transform:translate(-50%, -50%) scale(.2);
 	}
 
 	.ql-doodle-globos-3 {
 	  left:56%;
-	  top: 35%;
-	  transform:translate(-50%, -50%) scale(.3);
+	  top: 38%;
+	  transform:translate(-50%, -50%) scale(.2);
 	}
 
 	.ql-doodle-globos-4 {
-	  left: 83.5%;
-	  top: 3%;
-	  transform:translate(-50%, -50%) scale(.25);
+	  left: 84%;
+	  top: 7%;
+	  transform:translate(-50%, -50%) scale(.15);
 	}
 	
 	/* ================================
@@ -6100,6 +6084,45 @@ border-radius: 10px;
     height: auto !important;
     overflow: visible !important;
   }
+	
+	
+	
+.ql-modalidades-title-red{
+  animation: none !important;
+  transform: rotate(-4deg) !important;
+  will-change: transform;
+}
+	  .ql-razones-header h2 span{
+    animation: none !important;
+    transform: rotate(-4deg);
+  }
+	  .ql-testimoniales-million {
+    animation: none !important;
+    transform: rotate(3deg);
+  }
+
+	
+.ql-empresas-title span{
+  animation: none !important;
+  transform: rotate(var(--ql-empresas-rotacion, -4deg)) !important;
+  will-change: transform;
+}
+  .ql-form-step-title span{
+    animation: none !important;
+    transform: rotate(-4deg) !important;
+    will-change: transform;
+  }
+
+	
+	.ql-blog-card-btn .ql-blog-read-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.ql-blog-card-btn .ql-blog-read-icon svg {
+  width: 16px;
+  height: 16px;
+}
 }
 
 
@@ -6408,7 +6431,6 @@ body {
 .ql-razon-card h3,
 .ql-presencial-mini-card h3,
 .ql-presencial-course-copy h3,
-.ql-sucursal-card h3,
 .ql-blog-list-text h2 {
   font-size: var(--ql-card-title-size) !important;
   line-height: 1.08 !important;
@@ -6469,18 +6491,22 @@ strong {
 
 
 /* FORMULARIO */
-.ql-form-side h2,
 .ql-form-title {
   font-size: clamp(32px, 2.35vw, 42px) !important;
   line-height: 1.05 !important;
   font-weight: var(--ql-weight-bold) !important;
   letter-spacing: -1px !important;
 }
+.ql-form-side h2 {
+  font-size: clamp(32px, 2.35vw, 32px) !important;
+  line-height: 1.05 !important;
+  font-weight: var(--ql-weight-bold) !important;
+  letter-spacing: -1px !important;
+}
 
 .ql-form-grid input,
-.ql-form-grid select,
-.ql-checkbox {
-  font-size: clamp(14px, .9vw, 16px) !important;
+.ql-form-grid select
+  font-size: clamp(20px, .9vw, 16px) !important;
   font-weight: var(--ql-weight-semibold) !important;
   line-height: 1.2 !important;
 }
