@@ -3289,8 +3289,8 @@ font-weight: 500;
 }
 
 .ql-blog-read-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -3413,7 +3413,7 @@ font-weight: 500;
 .ql-blog-card-btn {
   margin: 26px auto 0;
   width: 175px;
-  height: 44px;
+  height: 50px;
 }
 .ql-blog-card-btn {
   border: 3px solid #223267;
@@ -3424,8 +3424,8 @@ font-weight: 500;
 }
 
 .ql-blog-card-btn .ql-blog-read-icon {
-  width: 52px;
-  height: 52px;
+  width: 34px;
+  height: 34px;
 }
 
 .ql-blog-card-btn .ql-blog-read-icon svg {
@@ -3480,18 +3480,18 @@ font-weight: 500;
 }
 
 .ql-blog-list-text .ql-blog-read-btn {
-  width: 150px;
-  height: 40px;
+  width: 175px;
+  height: 50px;
   margin-top: 0;
 }
 
 .ql-blog-list-text .ql-blog-read-text {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .ql-blog-list-text .ql-blog-read-icon {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
 }
 
 .ql-blog-list-text .ql-blog-read-icon svg {
@@ -5726,10 +5726,21 @@ body {
     height: 102%;
     object-fit: contain;
     object-position: center top;
-
     background: #000;
 }
+	.ql-blog-list-text .ql-blog-read-icon svg {
+  width: 16px;
+  height: 16px;
+}
 	
+	.ql-blog-read-icon svg {
+		  width: 16px;
+  height: 16px;
+	}
+.ql-blog-read-btn:hover .ql-blog-read-icon-left svg {
+		  width: 16px;
+  height: 16px;
+	}
 	/* ================================
    CELULAR - HOME / INDEX
 ================================ */
