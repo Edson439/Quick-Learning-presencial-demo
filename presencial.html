@@ -67,7 +67,7 @@
       </button>
     <div class="ql-home-course-date" id="courseDateBar">
     <span class="ql-home-course-date-text">
-      Próximo inicio de curso:&nbsp;<strong><br>20 de abril</strong>
+      🚀 Próximo inicio de curso:&nbsp;<strong>20 de abril</strong>
     </span>
 
     <button class="ql-home-course-date-close">×</button>
@@ -476,42 +476,40 @@
 	<!-- 🟦 CTA FINAL -->
 	<section class="ql-cta-section">
 
-	  <div class="ql-cta-content">
+  <div class="ql-cta-content">
 
-		<h2 class="ql-cta-title">
-		  ¡Empieza a hablar<br>
-		  <span>inglés hoy!</span>
-		</h2>
+    <h2 class="ql-cta-title">
+      ¡Empieza a hablar<br>
+      <span>inglés hoy!</span>
+    </h2>
 
-		<p class="ql-cta-text">
-		  Agenda una asesoría con nuestro equipo y<br>
-		  descubre qué curso se adapta mejor a tus<br>
-		  objetivos. Nuestro equipo te ayudará a<br>
-		  encontrar el programa ideal para ti.
-		</p>
+    <p class="ql-cta-text">
+      Cuéntanos tus objetivos.<br>
+      Nosotros te ayudamos a elegir<br>
+      el mejor curso para tí.
+    </p>
+	<button class="ql-home-hero-cta">
 
-		<button class="ql-home-hero-cta">
+	  <span class="ql-home-hero-icon ql-home-hero-icon-left">
+		<img src="images/whats2.png" alt="WhatsApp">
+	  </span>
 
-		  <span class="ql-home-hero-icon ql-home-hero-icon-left">
-			<img src="images/whats2.png" alt="WhatsApp">
-		  </span>
+	  <img class="ql-home-cta-text-img" src="images/quiero2.png" alt="Contáctanos">
 
-		  <img class="ql-home-cta-text-img" src="images/contactanos.png" alt="Contáctanos">
+	  <span class="ql-home-hero-icon ql-home-hero-icon-right">
+		<img src="images/whats.png" alt="WhatsApp">
+	  </span>
 
-		  <span class="ql-home-hero-icon ql-home-hero-icon-right">
-			<img src="images/whats.png" alt="WhatsApp">
-		  </span>
+	</button>
 
-		</button>
+  </div>
 
-	  </div>
+  <!-- Personaje -->
+<div class="ql-cta-character">
+  <img class="ql-cta-personaje" src="images/personaje.png" alt="Personaje">
+</div>
 
-  	<!-- Personaje -->
-	<div class="ql-cta-character">
-	  <img class="ql-cta-personaje" src="images/personaje.png" alt="Personaje">
-	</div>
-
-	</section>
+</section>
 	
 	<!-- 🟦 FORMULARIO  -->
 	<section class="ql-form-section">
@@ -541,13 +539,12 @@
           <input type="email" placeholder="Correo">
           <input type="text" placeholder="Teléfono">
 
-          <select>
-            <option>Ciudad</option>
-          </select>
-
-          <select>
-            <option>Tipo de Curso</option>
-          </select>
+			<select>
+			  <option value="" selected disabled>Tipo de Curso</option>
+			  <option value="presencial">Presencial</option>
+			  <option value="virtual">Virtual</option>
+			  <option value="online">Online</option>
+			</select>
 
           <label class="ql-checkbox">
             <input type="checkbox">
@@ -562,7 +559,7 @@
               </svg>
             </span>
 
-            <img class="ql-form-text-img" src="images/enviar.png" alt="Enviar">
+            <img class="ql-form-text-img" src="images/quiero.png" alt="Enviar">
 
             <span class="ql-form-icon ql-form-icon-right">
               <svg viewBox="0 0 24 24">
@@ -984,11 +981,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let progress = 1 - (rect.top / vh);
   progress = Math.max(0, Math.min(progress, 1));
 
-  const movimiento = 180 - (180 * progress);
+  const movimiento = 580 - (580 * progress);
 
   personaje.style.transform = `translateX(${movimiento}px)`;
 
 });
 </script>
+	
 </body>
 </html>
