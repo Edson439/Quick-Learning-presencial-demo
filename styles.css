@@ -371,7 +371,7 @@ font-weight: 500;
   font-size: 82px;
   line-height: 1.05;
   letter-spacing: -2px;
-  margin-bottom: -22px;
+  margin-bottom: -15px;
   text-align: center;
   text-shadow: 0 3px 0 rgba(20, 35, 68, 0.45);
   font-weight: 700;
@@ -6614,4 +6614,19 @@ strong {
     font-size: 72px !important;
   }
 }
+/* FORMULARIO MÁS ALTO SOLO EN LA PÁGINA EMPRESAS */
+@media (min-width: 769px) {
 
+  .ql-form-section-empresas .ql-form-side {
+    height: 750px;
+  }
+
+  .ql-form-section-empresas .ql-form-photo {
+    height: 750px;
+  }
+
+  .ql-form-section-empresas .ql-form-container {
+    height: 750px;
+  }
+
+}
