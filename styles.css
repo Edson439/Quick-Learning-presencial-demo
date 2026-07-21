@@ -11,6 +11,7 @@
 }
 html {
   scroll-behavior: smooth;
+ overflow-x: hidden;
 }
 /* ================================
    TIPOGRAFA GILROY
@@ -1108,15 +1109,15 @@ font-weight: 500;
 
 .ql-testimoniales-cards {
   margin: 95px auto 0;
-  max-width: 1080px;
+  max-width: 1170px;
   display: flex;
   justify-content: center;
-  gap: 85px;
+  gap: 65px;
 }
 
 .ql-testimoniales-card {
   width: 255px;
-  height: 455px;
+  height: 435px;
   background: #325ea9;
   border: 4px solid #212c51;
   border-radius: 16px;
@@ -1168,6 +1169,9 @@ font-weight: 500;
 .ql-testimoniales-card-right {
   transform: rotate(-1.5deg);
 }
+.ql-testimoniales-card-new {
+  transform: rotate(1.5deg);
+}
 
 .ql-testimoniales-card {
   transform-origin: center bottom;
@@ -1191,7 +1195,10 @@ font-weight: 500;
   --card-start: translateY(240px) rotate(-1.5deg);
   --card-end: translateY(0) rotate(-1.5deg);
 }
-
+.ql-testimoniales-card-new  {
+  --card-start: translateY(240px) rotate(2deg);
+  --card-end: translateY(0) rotate(2deg);
+}
 @keyframes qlTestimonialCardsUp {
   from {
     transform: var(--card-start);
@@ -5961,7 +5968,7 @@ body {
 }
 .ql-testimoniales-card {
   width: 260px;
-  height: 455px;;
+  height: 450px;;
   margin: 0 auto 35px;
 }
 
